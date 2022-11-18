@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hHh lpR fFf">
 
-    <q-header v-show="is_logged_in" elevated class="text-white bg-dark">
+    <q-header style="height: 5vh" v-show="is_logged_in" elevated class="text-white bg-dark">
       <q-toolbar>
         <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
 
@@ -11,11 +11,11 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-show="is_logged_in" show-if-above v-model="leftDrawerOpen" side="left" bordered>
+    <q-drawer v-show="is_logged_in" v-model="leftDrawerOpen" side="left" overlay bordered>
       <!-- drawer content -->
     </q-drawer>
 
-    <q-page-container>
+    <q-page-container style="height: 95vh">
       <router-view />
     </q-page-container>
 
@@ -28,8 +28,8 @@ import { ref } from 'vue'
 export default {
   name: "App",
   setup () {
-    const leftDrawerOpen = ref(false)
-    const is_logged_in = ref(false)
+    const leftDrawerOpen = ref(false);
+    const is_logged_in = ref(true);
 
     return {
       leftDrawerOpen,
