@@ -29,7 +29,7 @@ export default {
   name: "App",
   setup () {
     const leftDrawerOpen = ref(false);
-    const is_logged_in = ref(true);
+    const is_logged_in = ref(false);
 
     return {
       leftDrawerOpen,

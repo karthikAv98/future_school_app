@@ -1,19 +1,24 @@
 <template>
-    <div class="row q-gutter-sm" style="height: 100%; width: 100%">
-        <div class="col-5 text-center q-ma-xl" style="margin-top: 10%">
-            <div class="row q-gutter-sm items-center">
-                <div class="col self-center q-mt-xl">
-                    <h2>Sign In</h2>
+    <div class="row q-gutter-sm justify-center" style="height: 100%; width: 100%">
+        <div class="col-5" style="margin-top: 10%">
+            <div class="row q-gutter-sm q-mt-xl">
+                <div class="col">
+                    <h2 class="text-center">Sign In</h2>
                 </div>
             </div>
-            <div class="row q-gutter-sm q-mt-xl q-mb-xl">
-                <div class="col">
+            <div class="row q-gutter-sm q-mb-lg justify-center">
+                <div class="col-7">
                     <q-input type="text" filled label="Email" />
                 </div>
             </div>
-            <div class="row q-gutter-sm q-mt-xl">
-                <div class="col self-center">
+            <div class="row q-gutter-sm justify-center">
+                <div class="col-7">
                     <q-input type="text" filled label="Password" />
+                </div>
+            </div>
+            <div class="row q-gutter-sm justify-center">
+                <div class="col-7">
+                    <p class="text-right" style="color: #3dbeff; cursor: pointer">Forgotten your password</p>
                 </div>
             </div>
         </div>
