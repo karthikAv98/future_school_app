@@ -18,7 +18,7 @@
             </div>
             <div class="row q-gutter-sm justify-center">
                 <div class="col-7">
-                    <p class="text-right" style="color: #3dbeff; cursor: pointer">Forgotten your password</p>
+                    <p @click="todo()" class="text-right" style="color: #3dbeff; cursor: pointer">Forgotten your password</p>
                 </div>
             </div>
         </div>
@@ -41,16 +41,12 @@ import { ref } from 'vue'
 export default {
     name: "Login",
     setup() {
-        const router = useRouter();
-        const text = ref("")
-
-        function onClick() {
-            router.push("/")
+        function todo() {
+            alert('to do ui for forgot password')
         }
 
         return {
-            onClick,
-            text
+            todo
         }
     },
 }
