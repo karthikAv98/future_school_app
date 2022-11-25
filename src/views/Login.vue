@@ -34,22 +34,14 @@
     </div>
 </template>
 
-<script>
-import { useRouter } from 'vue-router'
-import { ref } from 'vue'
-
-export default {
-    name: "Login",
-    setup() {
-        function todo() {
-            alert('to do ui for forgot password')
-        }
-
-        return {
-            todo
-        }
-    },
+<script setup>
+const todo = () => {
+    alert("to do ui for forgot password");
 }
+
+defineExpose({
+    todo,
+})
 </script>
 
 <style scoped>

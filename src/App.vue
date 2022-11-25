@@ -22,22 +22,18 @@
   </q-layout>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
 
-export default {
-  name: "App",
-  setup () {
-    const leftDrawerOpen = ref(false);
-    const is_logged_in = ref(false);
-
-    return {
-      leftDrawerOpen,
-      is_logged_in,
-      toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
-    }
-  }
+const leftDrawerOpen = ref(false);
+const is_logged_in = ref(false);
+const toggleLeftDrawer = () => {
+  leftDrawerOpen.value = !leftDrawerOpen.value
 }
+
+defineExpose({
+  leftDrawerOpen,
+  is_logged_in,
+  toggleLeftDrawer
+})
 </script>
